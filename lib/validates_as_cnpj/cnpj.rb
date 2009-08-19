@@ -6,6 +6,9 @@ module CNPJ
     88888888888888 99999999999999)
 
   def self.valid? cnpj
+    # Do not validate if blank
+    return true if cnpj.blank?
+    
     # Basic validation
     cnpj = cnpj.to_s
 
